@@ -15,11 +15,13 @@ El objetivo de este ejercicio es poder entender tus habilidades como programador
 
 El problema a resolver consiste en encontrar la máxima cantidad de rectángulos de dimensiones "a" y "b" (paneles solares) que caben dentro de un rectángulo de dimensiones "x" e "y" (techo) y dibujarlos, según se muestra en la siguiente figura:
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/5fd840ef-599c-4be1-aeef-1ea8a114fce5/9dd7880a-77cd-4127-984b-00d26d5549bd/Untitled.png)
+<img width="971" height="649" alt="image" src="https://github.com/user-attachments/assets/137dfdcd-af5b-4850-8100-eddba65147a8" />
 
 Por ejemplo, podríamos decir que en el siguiente ejemplo caben 5 rectángulos de dimensiones 1 y 2, en un rectángulo de dimensiones 3 y 5.
 
-![¿O caben más? 👀](https://prod-files-secure.s3.us-west-2.amazonaws.com/5fd840ef-599c-4be1-aeef-1ea8a114fce5/f2217992-2d65-47e2-9865-087d5dbbb978/Untitled.png)
+<img width="951" height="638" alt="image" src="https://github.com/user-attachments/assets/2b9b55af-6704-4735-bb74-5c6f98c4bc43" />
+
+¿O caben más? 👀
 
 ## 📜 Instrucciones
 
@@ -84,13 +86,15 @@ Te dejamos dos alternativas que puedes intentar resolver también. Pero ojo que 
 
 Repetir el ejercicio base, considerando un techo triangular, isóceles.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/5fd840ef-599c-4be1-aeef-1ea8a114fce5/bf1e4651-277b-4a42-b9ea-b59fe177793b/Untitled.png)
+<img width="1010" height="728" alt="image" src="https://github.com/user-attachments/assets/13a2a04c-3672-421a-8a9c-3146505924ad" />
+
 
 **Opción 2**
 
 Repetir el ejercicio base considerando dos rectángulos iguales superpuestos. Puedes parametrizar la superposición entre ambos rectángulos.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2db5592c-1f8d-4fd4-abeb-09f3f856b429/Untitled.png)
+<img width="476" height="232" alt="image" src="https://github.com/user-attachments/assets/8daf9b46-ee03-4dc2-ac19-0ad4968b7941" />
+
 
 ### Bonus Implementado
 *[Si implementaste algún bonus, indica cuál y explica tu solución]*
