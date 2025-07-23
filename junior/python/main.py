@@ -11,7 +11,6 @@ def calculate_panels(panel_width: int, panel_height: int,
 
 
 def run_tests() -> None:
-    # Load test cases from JSON file
     with open('test_cases.json', 'r') as f:
         data = json.load(f)
         test_cases: List[Dict[str, int]] = [
@@ -46,7 +45,6 @@ def main() -> None:
     print("🐕 Wuuf wuuf wuuf 🐕")
     print("================================\n")
     
-    # Run test cases
     run_tests()
 
 
