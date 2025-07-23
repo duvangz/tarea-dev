@@ -1,4 +1,5 @@
 from typing import List, Tuple, Dict
+import json
 
 
 def calculate_panels(panel_width: int, panel_height: int, 
@@ -10,11 +11,19 @@ def calculate_panels(panel_width: int, panel_height: int,
 
 
 def run_tests() -> None:
-    test_cases: List[Dict[str, int]] = [
-        {"panel_w": 1, "panel_h": 2, "roof_w": 2, "roof_h": 4, "expected": 4},
-        {"panel_w": 1, "panel_h": 2, "roof_w": 3, "roof_h": 5, "expected": 7},
-        {"panel_w": 2, "panel_h": 2, "roof_w": 1, "roof_h": 10, "expected": 0}
-    ]
+    # Load test cases from JSON file
+    with open('test_cases.json', 'r') as f:
+        data = json.load(f)
+        test_cases: List[Dict[str, int]] = [
+            {
+                "panel_w": test["panelW"],
+                "panel_h": test["panelH"],
+                "roof_w": test["roofW"],
+                "roof_h": test["roofH"],
+                "expected": test["expected"]
+            }
+            for test in data["testCases"]
+        ]
     
     print("Corriendo tests:")
     print("-------------------")

@@ -1,3 +1,17 @@
+import * as fs from 'fs';
+
+interface TestCase {
+  panelW: number;
+  panelH: number;
+  roofW: number;
+  roofH: number;
+  expected: number;
+}
+
+interface TestData {
+  testCases: TestCase[];
+}
+
 function calculatePanels(
   panelWidth: number,
   panelHeight: number,
@@ -17,16 +31,13 @@ function main(): void {
 }
 
 function runTests(): void {
-  const testCases = [
-    { panelW: 1, panelH: 2, roofW: 2, roofH: 4, expected: 4 },
-    { panelW: 1, panelH: 2, roofW: 3, roofH: 5, expected: 7 },
-    { panelW: 2, panelH: 2, roofW: 1, roofH: 10, expected: 0 }
-  ];
+  const data: TestData = JSON.parse(fs.readFileSync('test_cases.json', 'utf-8'));
+  const testCases = data.testCases;
   
   console.log("Corriendo tests:");
   console.log("-------------------");
   
-  testCases.forEach((test, index) => {
+  testCases.forEach((test: TestCase, index: number) => {
     const result = calculatePanels(test.panelW, test.panelH, test.roofW, test.roofH);
     const passed = result === test.expected;
     
