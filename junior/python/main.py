@@ -1,14 +1,29 @@
 from typing import List, Tuple, Dict
 import json
-
+from math import floor
 
 def calculate_panels(panel_width: int, panel_height: int, 
                     roof_width: int, roof_height: int) -> int:
     
-    # Implementa acá tu solución
-    
-    return 0
+    def mix_x():
+        best = 0
+        for k in range(0, floor(roof_width / panel_width) + 1):
+            n = k * floor(roof_height / panel_height) + floor((roof_width - k * panel_width) / panel_height) * floor(roof_height / panel_width)
+            if (n > best):
+                best = n
 
+        return best
+    
+    def mix_y():
+        best = 0
+        for k in range(0, floor(roof_height / panel_height)):
+            n = k * floor(roof_width / panel_width) + floor((roof_height - k * panel_height) / panel_width) * floor(roof_width / panel_height)
+            if ( n > best):
+                best = n
+
+        return best
+
+    return max(mix_x(), mix_y())
 
 def run_tests() -> None:
     with open('test_cases.json', 'r') as f:
