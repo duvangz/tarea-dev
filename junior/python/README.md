@@ -42,7 +42,7 @@ Tu solución debe pasar los siguientes casos de prueba:
   - Todo rotado: $N_2=\lfloor x/b\rfloor\cdot\lfloor y/a\rfloor$
   - Mezcla por **columnas**: $N_x(k)=k\lfloor y/b\rfloor+\lfloor(x-ka)/b\rfloor\lfloor y/a\rfloor$, para $k=0.. \lfloor x/a\rfloor$
   - Mezcla por **filas**: $N_y(k)=k\lfloor x/a\rfloor+\lfloor(y-kb)/a\rfloor\lfloor x/b\rfloor$, para $k=0.. \lfloor y/b\rfloor$
-  - **Resultado:** $max(N_x^*,\,N_y^*)$ (los casos uniformes ya quedan cubiertos con $k=0$ o $k$ máximo).
+  - **Resultado:** $\max(N_x^*, N_y^*)$ (los casos uniformes ya quedan cubiertos con $k=0$ o $k$ máximo).
 
 ---
 
