@@ -16,7 +16,7 @@ def calculate_panels(panel_width: int, panel_height: int,
     
     def mix_y():
         best = 0
-        for k in range(0, floor(roof_height / panel_height)):
+        for k in range(0, floor(roof_height / panel_height) + 1):
             n = k * floor(roof_width / panel_width) + floor((roof_height - k * panel_height) / panel_width) * floor(roof_width / panel_height)
             if ( n > best):
                 best = n
